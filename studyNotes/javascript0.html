@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>javascript入门经典</title>
+		<link rel="icon" type="text/css" href="logo.ico" />
+		<!--引入各种文件-->
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/nav.css" />
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		<!--	<link rel="stylesheet" type="text/css" href="css/footer.css"/>-->
+		<script src="script/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="script/nav.js" type="text/javascript" charset="utf-8"></script>
+		<script src="script/main.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			
+		</script>
+
+	</head>
+
+	<body>
+		<!--头部-->
+		<div id="header">
+			<!--导航-->
+			<div class="nav">
+				<!--logo-->
+				<div class="logo" title="返回首页">
+					<a href="http://www.baitt1994.xyz/" class="navImg">
+						<img src="img/logo.png" />
+					</a>
+					<div class="subImg" id="subImg">
+						<div class="arrow">
+							<img src="img/arrow.png" />
+						</div>
+						<div class="home">
+							<span id="">
+								返回首页
+							</span>
+						</div>
+					</div>
+				</div>
+				<!--主导航-->
+				<div class="mainNav">
+					<ul>
+						<li>
+							<a href="http://www.baitt1994.xyz/life.html" id="txt">life</a>
+							<div class="subLife" id="sub">
+								<a href="http://www.baitt1994.xyz/life.html">
+									<img src="img/eat.png" />
+									<span id="">食谱</span>
+								</a>
+								
+								<a href="http://www.baitt1994.xyz/life.html">
+									<img src="img/nav/play.png" />
+									<span id="">皂片</span>
+								</a>
+								
+							</div>
+						</li>
+						<li>
+							<a href="http://www.baitt1994.xyz/studyNotes.html" class="studyNotes" id="txt">studyNotes</a>
+							<div class="subStudy" id="sub">
+								<a href="http://www.baitt1994.xyz/studyNotes/css.html">
+									<img src="img/nav/css.png" />
+									<span id="">
+										CSS/CSS3
+									</span>
+								</a>
+								<a href="http://www.baitt1994.xyz/studyNotes/html.html">
+									<img src="img/nav/html.png" />
+									<span id="">
+										HTML/HTML5
+									</span>
+								</a>
+								<a href="http://www.baitt1994.xyz/studyNotes/jquery.html">
+									<img src="img/nav/jq.png" />
+									<span id="">
+										锋利的jquery
+									</span>
+								</a>
+								<a href="http://www.baitt1994.xyz/studyNotes/javascript0.html">
+									<img src="img/nav/js1.png" />
+									<span id="">
+										javascript入门经典
+									</span>
+								</a>
+								<a href="http://www.baitt1994.xyz/studyNotes/photoshop.html">
+									<img src="img/nav/ps.png" />
+									<span id="">
+										photoshop
+									</span>
+								</a>
+								<a href="http://www.baitt1994.xyz/studyNotes/javascript.html">
+									<img src="img/nav/js.png" />
+									<span id="">
+										javascript权威指南
+									</span>
+								</a>
+							</div>
+						</li>
+						<li>
+							<a href="http://www.baitt1994.xyz/more.html" class="navMore" >more</a>
+							<div class="subMore" id="subM">
+								<div class="arrow">
+									<img src="img/arrow.png" />
+								</div>
+								<div class="subMoreNav">
+									<ul>
+										<li>
+											<a href="https://github.com/baiwh">
+												
+												<span id=""><img src="img/icon/github.png" />myGithub</span>
+											</a>
+										</li>
+										<li>
+											<a href="">
+												
+												<span id=""><img src="img/icon/email.png" />联系我</span>
+											</a>
+										</li>
+									</ul>
+
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<!--搜索框-->
+				<div class="search">
+					<input type="text" name="" id="" class="inp" value="搜索功能待完善" />
+					<input type="button" name="" class="searchButton" value="搜索" />
+				</div>
+			</div>
+		</div>
+
+		<!--主体-->
+		<div id="content" >
+			<div class="menu">
+				<h1>第一部分。JavaScript基础</h1>
+				<div class="container">
+					<pre>
+1.对象表示法
+	用句点方式。可以扩展任意多次。
+	对象1.对象2.对象3
+	对象1.对象2.属性或方法
+2.模态对话框（弹出）
+     alert（“内容”）；
+3.向html文档写入
+     document.write（“内容”）；
+4.读取document对象的属性
+     alert（document.title）；
+5.添加JavaScript
+     &lt;script&gt;...&lt;/script&gt;
+	&lt;script src='....js'&gt;&lt;/script&gt;
+6.注释
+     //.....或者/*....*/
+7.变量
+     var price=8;
+     vat name="John";
+8.操作符
+     算数+-*/：var sum=4+3;
+     用变量名称+-*/：var first=1;
+               var second=2;
+               var sum=first+second;
+     求余数：%
+     自增自减++ --：items++；
+     加等+-*/：total+=5;等价于total=total+5;
+9.字符串操作
+     var firstname="john";
+     var surname="doe";
+     var fullname=firstname+" "+surname;
+     字符串+数值=字符串（数值会被转换成字符串）
+10.onclick事件处理器
+     直接给HTML标签添加属性。
+     &lt;input type ="button" onclick="JavaScript语句" value="click me"/&gt;
+11.onmouseover事件处理器
+     鼠标指针进入某元素区域时。
+     &lt;ima src="image1.png" alt="image 1" onmouseover="JavaScript语句" /&gt;
+12.onmouseout事件处理器
+     和onmouseover组合可以实现鼠标进入和离开某区域时的图像变化。
+     &lt;ima src="1.gif" alt="image 1" onmouseover="2.gif" onmouseout="1.gif" /&gt;
+13.创建函数
+    &lt;script&gt;
+     function 函数名称（）
+     {JavaScript语句；}
+     &lt;/script&gt;
+14.调用函数
+     函数名称（）；
+     &lt;HTML标签 onclick="函数名称（）" /&gt;
+     放到&lt;head&gt;区域，可以从页面的任何位置调用函数
+15.给函数传递参数
+     function cube(x)
+     {alert(x*x*x);}
+     cube(3);
+     var length=3;
+     cube(length);
+16.多参数
+     function cube(a,b)
+     {alert(a*b);}
+     cube(3,4);
+17.返回值
+     function cube（x）
+     {return x*x*x;}
+     var answer=cube(3);
+     把函数返回的值赋予一个变量即可在函数外部得到这个值
+18.变量作用域
+     函数内部定义的变量制作用于函数的内部，局部变量。函数外的为全局变量。
+
+					</pre>
+				</div>
+			</div>
+			<div class="menu">
+				<h1>第二部分。编程</h1>
+				<div class="container">
+					<pre>
+1.alert
+     弹出对话框，只有消息和按钮。把字符串作为参数，没有返回值
+2.confirm
+     弹出对话框，可选择按钮。有返回值。ok返回真，cancel返回假。
+3.prompt
+     允许输入信息的模态对话框。可选择按钮。有返回值。输入内容，按ok返回输入的值。没输入内容，返回默认值。cancel返回null。
+     prompt("问题","答案,默认值");
+4.根据ID选择元素
+     从HTML页面里选择具有某个特定ID的元素，秩序把相应元素的ID作为参数来调用document对象的getElementById（）方法。
+		会返回特定的ID的页面元素所对应的DOM对象
+     &lt;div id="div1"&gt;     ...     &lt;/div&gt;
+     var mydiv=document.getElementById("div1");
+     读取或设置特定页面元素内部的HTML内容
+     访问/读取：var myDiv=document.getElementById("div1").innerHTML;
+     设置/删除/改变/替换：document.getElementById("div1").innerHTML="新内容";
+5.访问浏览器历史记录：
+     history只有一个属性，即它的长度，表示访问过的页面的数量
+     前进：history.forward();
+     后退：history.backward();
+     跳转到历史记录的某页，参数是正或负的整数：history.go(-3);
+     找到历史列表里第一个匹配的URL，参数为字符串：history.go("匹配内容");
+6.location对象
+     当前加载页面的URL信息。协议//主机名：端口/路径 搜索 hash
+7.导航至新页面：
+     直接设置对象的href属性，原始页面还保留在浏览器的历史记录里，back按钮可返回以前页面：location.href='www.newpage.com';
+     直接替换当前页面，从历史记录列表里删除，浏览器和历史记录都会用新的URL来代替旧的：location.replace('www.newpage.com');
+8.刷新页面：
+     重新加载当前页面，如果浏览器保存了当前页面，就会加载缓存内容：location.reload();
+     从服务器获得页面数据：document.reload(true);
+9.navigator对象：
+     浏览器本身的数据，用来检测浏览器功能
+10.日期
+     当前日期：var mydate=new Date();
+     获取当前日期：var xxx=mydate.getxxx();附录
+     指定日期字符串：var date=new Date("October 22,1995 10:00:00")
+     指定日期参数：var date2=new Date(年，月，日，时，分，秒，毫秒）
+               前三个参数必填，后边的自选，后边的未指定的用0代替
+11.设置和编辑日期
+     当前日期时间：var date=new Date();
+     更改成某日：date.setDate(某日);
+     日期增加n天：date.setDate(date.getDate()+n);
+12.math对象
+     var num=11.5
+     向上取整：alert(Math.ceil(num));
+     向下取整：alert(Math.floor(num));
+     四舍五入：alert(Math.round(num));
+13.一组数中的最值（max/min）
+     document.write(Math.max(n1,n2,n3));
+14.随机数
+     function myRand(range){
+          retrn Math.round(Math.random()*range);}
+     先用Math生成随机数，乘变量range来扩大范围，再利用round（）去除小数
+     或者直接调用myRand（100），得到0-100的随机数
+15.数学常数
+     在计算中直接用，如PI圆周率：var area=Math.PI*radius*radius;
+16.关键字with
+     代码块里的语句在调用特定对象的方法时可以不必指定这个对象
+     with(Math){
+          var myRand=random();
+          var big=max(3,4,5);}
+17.非数值（NaN）
+     非数值的数据当做数值处理，返回值就是NaN,利用isNaN（）可以检测非数值
+     isNaN(3);  //false
+     isNaN("three");  //trrue
+18.把字符串强制转换为数值格式
+     解析一个字符串并返回一个浮点数（首字符是数字会一直解析到数字结束，不是数字的返回NaN）：parseFloat("字符串");
+     同上，但返回一个整数，可以有第二个可选参数，用于指定数值的基，返回二/八/十...进制：parseInt("字符串");
+19.无穷大（±2^53）
+     判断数值是否无穷大，把参数转换为数值，结果是NaN、正无穷大（Infinity）、负无穷大（-Infinity），
+		返回false，其他情况返回ture：isFinite(函数);
+20.字符串
+     用单引号或者双引号定义：var myString="a string";
+     定义空字符串：var mystring="";
+     不能在字符串中出现的特殊字符用反斜线\
+21.字符串方法
+     连接字符串：var string=string1.concat(string2);
+     返回子字符串第一次出现的位置（找不到返回-1）：string.indexOf(‘子字符串’);
+     同上，返回最后一次的位置：string.lastIndexOf(‘子字符串’);
+     找到子字符串并替换：var string1=string.replace("子字符串","替换的");
+     把字符串分解为多个子字符串的数组并返回新数组：var newArray=string.split(" ");
+     从指定的索引位置开始提取字符并返回，提取字符数量可选：var sub=string.subsre(指定位置,字符数量);
+     全部转换大小写：var sub=string.toLowerCase();    或者toUpperCase
+22.布尔值
+     对布尔类型的变量赋值时注意不要加引号。true自动转换为1，false为0。
+     类假：布尔false、未定义undefined、null、0、NaN、空字符串“”
+     类真：非0
+23.数组
+     可以保存任何数据类型
+     创建数组：var myArray=new Array();或者var myArray=[];
+     数组初始化：var myArray=new Array['a1','a2','a3'];
+               或者var myArray=[];
+                    myArray[0]='a1';
+                    myArray[1]='a2';
+     数组长度：myArray.length
+24.数组方法
+     合并多个数组：var array=array1.concat(array2);
+     把数组元素连接形成字符串：var array=myArray.join();
+                              加分隔符：var array=myArray.join("分隔符");
+     同上，用逗号分隔：var array=myArray.toString();
+     找到指定元素在数组里第一次出现的位置并返回索引值，未找到返回-1：myArray.indexOf('指定元素');
+     同上，最后一次出现的位置：myArray.lastIndexOf();
+     从当前数组提取一个子集：var son=myArray.slice(开始的索引值,要提取的元素的数量);
+     把数组按字母顺序排列：myArray.sort();
+     添加或删除指定的一个或多个元素，会改变原数组，返回值是被删元素：array.splice(操作的位置,删除元素个数0表示不删除,
+		[要插入的新元素列表，可选]);
+25.if
+     if（条件为真） 执行操作
+     if(true) message="";
+     非：！
+     if(a&lt;12) message="";
+     比较操作符：等于==、值和类型都相等===、不等于！=、     
+     if(...)
+          {...;}
+     else if(...)
+          {...;}
+     else{...;}
+	简便语法：（条件为真）？[条件为真执行的]:[条件为假执行的];
+26.switch
+     switch(要判断的变量){
+     case "...":
+          message="满足当前条件时执行的语句";
+          break;
+     defaule:
+          任何case都不满足时执行的操作；}
+27.逻辑操作符
+     与&&。或||
+28.while
+     只要条件判断结果为true，就会反复执行。不满足条件，循环会停止，执行花括号后的语句
+     while(条件)
+          {...;}
+29.do...while
+     条件判断前，代码块会先执行一次
+     do{...;}
+     while(...)
+30.for
+     for(初始条件；判断条件；循环后修改技术变量）
+          {执行；}
+     如果没有提前声明技术变量，可以在for语句初始条件里用var声明
+31.for...in
+     用于在对象的属性里进行循环，不必考虑使用循环计数器，或是判断循环结束的条件。
+		循环会对集合中的每个对象执行一次，然后结束。可以操作任何对象的属性。
+     for(...in...){...;}
+32.定时器
+      让程序延迟特定一段时间再执行
+33.setTimeout()
+      第二个参数所指定的毫秒之后，调用第一个参数。
+      &lt;div id="id1"&gt;...&lt;/div&gt;
+      function hide(elementId)
+          {document.getElementById(elementId).style.display+'none';}
+     window.onload=function()
+          {setTimeout("hide('id1')",3000);}
+     会返回一个值，想稍后取消定时器函数，通过将返回值传入给clearTimeout()来引用
+     var timer1=setTimeout("hide('id')",3000);
+     clearTimeout(timer1);
+34.setInterval()
+     同上，但是会重复执行，在两次执行之间，延迟第二个参数所指定的毫秒数。
+					</pre>
+				</div>
+			</div>
+			<div class="menu">
+				<h1>第三部分。对象</h1>
+				<div class="container">
+					<pre>
+1.创建对象
+     myNewObject=new Object();
+2.给对象添加属性
+     myNewObject.info="....";
+3.给对象添加方法
+     function myFunc(){
+          alert(this.info);};
+     myNewObject.showInfo=myFunc();
+4.调用这个方法
+     myNewObiject.showInfo();
+5.this
+	在函数里使用this，指向函数的父对象
+6.匿名函数(对应3)
+     myNewObject.showInfo=function(){
+          alert(this.info);}
+7.使用构造函数
+     创建可能具有多个实例的对象，创造某种模板，方便实现多次实例化
+     先声明一个函数，然后在函数里使用this
+     function myObjectType(){
+          this.info="...";
+          this.showInfo=function(){
+               alert(this.info);}}
+8.对象实例化
+     var myNewObject=new myObjectType();
+9.构造函数参数
+     给构造函数传递一个或多个参数来定制对象
+     function Person(personName){
+          this.name=personName;
+          this.showInfo=function(){
+               alert(this.info);}}
+     var person1=new Person('a');
+     var person2=new Person('b');
+     多个参数function Person(personName，time){...}
+               var person1=new Person('a','2017');
+10.扩展对象
+     扩展前名字.prototype.扩展后名字=function(){
+          内容;}
+11.继承
+     先设计出通用的对象类型，再继承来不断细化得到更特定的类型
+     function a(){...}
+     function b(){...}
+     b.prototype=new a();
+12.扩展内置对象
+     如扩展string对象（8.4）
+13.封装
+     把数组和指令隐藏到对象内部，在构造函数内部声明的变量只能在对象内部使用，对于外部不可见。如果想从外部访问需用this。
+     function Box(width,length,height){
+          function volume(a,b,c){
+               return a*b*c;
+          }
+          this.boxVolume=volume(width,length,height);
+     }
+     var crate=new Box_5,4,3);
+     alert("Volume="+crate.boxVolume);            //对
+     alert(volume(5,4,3));            //错
+14.功能检测
+					</pre>
+				</div>
+			</div>
+			<div class="menu">
+				<h1>第四部分。htmlCSS</h1>
+				<div class="container">
+					<pre>
+整理中。。。
+					</pre>
+				</div>
+			</div>
+			<div class="menu">
+				<h1>第五部分。库</h1>
+				<div class="container">
+					<pre>
+1.在页面里引用jQuery
+     下载：从http://jquery.com/download/下载，压缩版用于运行站点，体积小，开发中用非压缩版。
+          在&lt;head&gt;中引用&lt;script src="文件名.js"&gt;&lt;/script&gt;
+     远程CDN：不用下载，可减少加载时间。
+               Google Ajax API CDN:http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js
+               Microsoft CDN:http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.1.min.js
+               jQuery CDN:http://code.jquery.com/jquery-1.7.1.min.js（简化版）
+					http://code.jquery.com/jquery-1.7.1.js
+               &lt;script src="http://code.jquery.com/jquery-latest.min.js "&gt;&lt;/script&gt;
+2.jQuery中对应的window.onload
+     $(document).ready(function(){...});
+3.选择页面元素
+     $("");
+     DOM和css的选择符：$("span");全部span
+     $("#elem");ID为elem的HTML元素
+     $(".classname");类为classname的HTML
+     $("div#elem");ID为elem的div
+     $("ul li a.menu");ID为menu且嵌套在列表项里的锚点
+     $("p&gt;span");p的直接子元素span
+     $("input[type=password]");具有指定类型的输入元素
+     $("p:first");页面上第一个段落
+     $("p:even");全部偶数段落
+     自己定制的：$(":header");标题元素
+     $(":button");全部按钮/输入框元素
+     $(":radio");单选
+     $(":checkbox");选择框
+     $(":checked");选中状态的选择框或单选
+4.获取元素的HTML内容（包括文本）
+     var 变量名称=$("#id名称").html();
+5.设置HTML内容
+     $("#id名称").html("&lt;p&gt;替换后的内容&lt;/p&gt;");
+6.获取元素的文本内容（不包括HTML）
+     var 变量名称=$("#id名称").text();
+7.替换元素的文本内容
+     $("#id名称").text("替换后的文本内容");
+8.添加文本内容
+     $("#id名称").append("&lt;p&gt;添加的文本内容&lt;/p&gt;");
+9.给页面上全部某种元素添加内容
+     $("元素类型如div").append("&lt;p&gt;添加的文本内容&lt;/p&gt;");
+10.返回属性的值（应用于一个元素时返回特定属性的值，应用于一组只返回第一个元素的值）
+     var title=$("#id").attr("title");
+11.设置属性的值
+     $("#id").attr("title","要设置的内容");
+12.让单个元素或一组元素显示在页面上
+     $("div").show();
+     调整显示过程：第一个参数是速度（fast/slow/毫秒），第二个类似于回调函数（显示完成时执行的操作）
+                    $("#id").show("fast",function(){显示后执行的操作});
+13.隐藏页面元素
+     $("#id").hide("fast",function(){隐藏后执行的操作});
+14.改变一个元素或一组元素的显示状态
+     $("#id").toggle("fast",function(){显示或隐藏后执行的操作});
+15.淡出
+     $("#id").fadeOut("fast",function(){淡出后执行的操作});
+16.淡入
+     $("#id").fadeIn("fast",function(){淡入后执行的操作});
+17.只进行部分淡出淡入（0.5表示最终不透明度）
+     $("#id").fadeTo("fast",0.5,function(){后执行的操作});
+18.滑动
+     $("#id").slideDown("fast",function(){向下滑动后执行的操作});
+     $("#id").slideUp("fast",function(){向上滑动后执行的操作});
+     根据元素目前位置自动决定方向：$("#id").slideToggle("fast",function(){后执行的操作});
+19.动画
+     $("#id").animate({   });
+20.命令链
+     $("#id").fadeOut().fadeIn();
+21.
+					</pre>
+				</div>
+			</div>
+			<div class="menu">
+				<h1>第六部分。高级</h1>
+				<div class="container">
+					<pre>
+整理中。。。
+					</pre>
+				</div>
+			</div>
+		</div>
+
+	</body>
+
+</html>

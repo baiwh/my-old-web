@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>HTML/THML5</title>
+		<link rel="icon" type="text/css" href="logo.ico" />
+		<!--引入各种文件-->
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/nav.css" />
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		<!--	<link rel="stylesheet" type="text/css" href="css/footer.css"/>-->
+		<script src="script/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="script/nav.js" type="text/javascript" charset="utf-8"></script>
+		<script src="script/main.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			
+		</script>
+
+	</head>
+
+	<body>
+		<!--头部-->
+		<div id="header">
+			<!--导航-->
+			<div class="nav">
+				<!--logo-->
+				<div class="logo" title="返回首页">
+					<a href="http://www.baitt1994.xyz/" class="navImg">
+						<img src="img/logo.png" />
+					</a>
+					<div class="subImg" id="subImg">
+						<div class="arrow">
+							<img src="img/arrow.png" />
+						</div>
+						<div class="home">
+							<span id="">
+								返回首页
+							</span>
+						</div>
+					</div>
+				</div>
+				<!--主导航-->
+				<div class="mainNav">
+					<ul>
+						<li>
+							<a href="http://www.baitt1994.xyz/life.html" id="txt">life</a>
+							<div class="subLife" id="sub">
+								<a href="http://www.baitt1994.xyz/life.html">
+									<img src="img/eat.png" />
+									<span id="">食谱</span>
+								</a>
+								
+								<a href="http://www.baitt1994.xyz/life.html">
+									<img src="img/nav/play.png" />
+									<span id="">皂片</span>
+								</a>
+								
+							</div>
+						</li>
+						<li>
+							<a href="http://www.baitt1994.xyz/studyNotes.html" class="studyNotes" id="txt">studyNotes</a>
+							<div class="subStudy" id="sub">
+								<a href="http://www.baitt1994.xyz/studyNotes/css.html">
+									<img src="img/nav/css.png" />
+									<span id="">
+										CSS/CSS3
+									</span>
+								</a>
+								<a href="http://www.baitt1994.xyz/studyNotes/html.html">
+									<img src="img/nav/html.png" />
+									<span id="">
+										HTML/HTML5
+									</span>
+								</a>
+								<a href="http://www.baitt1994.xyz/studyNotes/jquery.html">
+									<img src="img/nav/jq.png" />
+									<span id="">
+										锋利的jquery
+									</span>
+								</a>
+								<a href="http://www.baitt1994.xyz/studyNotes/javascript0.html">
+									<img src="img/nav/js1.png" />
+									<span id="">
+										javascript入门经典
+									</span>
+								</a>
+								<a href="http://www.baitt1994.xyz/studyNotes/photoshop.html">
+									<img src="img/nav/ps.png" />
+									<span id="">
+										photoshop
+									</span>
+								</a>
+								<a href="http://www.baitt1994.xyz/studyNotes/javascript.html">
+									<img src="img/nav/js.png" />
+									<span id="">
+										javascript权威指南
+									</span>
+								</a>
+							</div>
+						</li>
+						<li>
+							<a href="http://www.baitt1994.xyz/more.html" class="navMore" >more</a>
+							<div class="subMore" id="subM">
+								<div class="arrow">
+									<img src="img/arrow.png" />
+								</div>
+								<div class="subMoreNav">
+									<ul>
+										<li>
+											<a href="https://github.com/baiwh">
+												
+												<span id=""><img src="img/icon/github.png" />myGithub</span>
+											</a>
+										</li>
+										<li>
+											<a href="">
+												
+												<span id=""><img src="img/icon/email.png" />联系我</span>
+											</a>
+										</li>
+									</ul>
+
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<!--搜索框-->
+				<div class="search">
+					<input type="text" name="" id="" class="inp" value="搜索功能待完善" />
+					<input type="button" name="" class="searchButton" value="搜索" />
+				</div>
+			</div>
+		</div>
+
+		<!--主体-->
+		<div id="content" >
+			<div class="menu">
+				<h1>HTML标签</h1>
+				<div class="container">
+					<pre>
+1、标题：h1-h6。1大6小。
+	浏览器会自动地在标题的前后添加空行。
+          默认情况下，HTML 会自动地在块级元素前后添加一个额外的空行，比如段落、标题元素前后。
+     &lt;h1&gt;...&lt;/h1&gt;
+2、水平线：
+     &lt;hr/&gt;
+3、注释：
+     &lt;!--...--&gt;
+4、段落：浏览器会自动地在段落的前后添加空行。（&lt;p&gt; 是块级元素）
+     &lt;p&gt;..&lt;/p&gt;
+5、背景的颜色：
+	主体背景颜色：&lt;body style="background-color:yellow"&gt;
+               ...
+             &lt;/body&gt;
+	标题颜色：&lt;h2 style="background-color:red"&gt;...&lt;/h2&gt;
+	段落颜色：&lt;p style="background-color:green"&gt;...&lt;/p&gt;
+6、字体的颜色和尺寸：
+	尺寸：&lt;h1 style="font-family:verdana"&gt;...&lt;/h1&gt;
+	颜色：&lt;p style="font-family:arial;color:read;fon-size:20px;"&gt;...&lt;/p&gt;
+7、文本对齐：
+     &lt;h1 style="text-align:center"&gt;...&lt;/h1&gt;
+8、文本格式化标签：&lt;*&gt;...&lt;/*&gt;
+	粗体：&lt;b&gt;
+	大号字：&lt;big&gt;
+	着重文字：&lt;em&gt;
+	斜体字：&lt;i&gt;
+	小号字：&lt;small&gt;
+	加重语气：&lt;strong&gt;
+	下标字：&lt;sub&gt;
+	上标字：&lt;sup&gt;
+	插入字：&lt;ins&gt;
+	删除字：&lt;del&gt;
+9、计算机输出标签： &lt;*&gt;...&lt;/*&gt;   这些标签常用于显示计算机/编程代码。支持固定的字母尺寸和间距。
+	计算机代码：&lt;code&gt;  不保留多余的空格和折行， 如需解决该问题，必须在 &lt;pre&gt; 元素中包围代码
+	键盘码：&lt;kbd&gt;
+	计算机代码样本：&lt;samp&gt;
+	打字机代码：&lt;tt&gt;
+	变量：&lt;var&gt;   定义数学变量
+	预格式文本：&lt;pre&gt;...它保留了空格和换行。pre 标签很适合显示计算机代码
+10、引用、引用和术语定义：&lt;*&gt;...&lt;/*&gt;
+	缩写：&lt;abbr&gt;...&lt;abbr title="etcetera"&gt;etc.&lt;/abbr&gt;..把鼠标移至缩略词语上时，
+		title 可用于展示表达的完整版本， 对缩写进行标记能够为浏览器、翻译系统以及搜索引擎提供有用的信息。
+	首字母缩写：&lt;acronym&gt;
+	地址：&lt;adress&gt;  此元素通常以斜体显示。大多数浏览器会在此元素前后添加折行。
+	文字方向：&lt;bdo&gt;
+	长引用：&lt;blockquote&gt;   使用 blockquote 元素的话，浏览器会插入换行和外边距， 
+		浏览器通常会对 blockquote 元素进行缩进处理。
+	短引用：&lt;q&gt;  而 q 元素不会有任何特殊的呈现，浏览器通常会在 q 元素周围包围引号。
+	引用、引证：&lt;cite&gt;   定义著作的标题。浏览器通常会以斜体显示 &lt;cite&gt; 元素。
+	定义项目：&lt;dfn&gt;
+11、链接：属性值本身就含有双引号，那么必须使用单引号
+	指向网址：&lt;a href="http://...."&gt;...&lt;/a&gt;
+	指向网页：&lt;a href="...  .htm"&gt;...&lt;/a&gt;
+	用图像做链接：&lt;a href="http://..."&gt;
+	             &lt;img src="...  .jpg" /&gt;
+	             &lt;/a&gt;
+	在新窗口打开链接：&lt;a href="http://..." target="_blank"&gt;...&lt;/a&gt;
+	跳转到指定位置（锚）：锚的名称可以是任何你喜欢的名字。可以使用 id 属性来替代 name 属性，命名锚同样有效。
+	命名一个锚：&lt;a name="tips"&gt;...&lt;/a&gt;
+	在同一个文档中创建指向该锚的链接：&lt;a href="#tips"&gt;...&lt;/a&gt;
+	在其他页面中创建指向该锚的链接：&lt;a href="http://.../html/html_links.asp#tips"&gt;...&lt;/a&gt;
+	跳出框架：&lt;a href="/index.html" target="_top"&gt;...&lt;/a&gt;
+	发邮件：&lt;a href="mailto:...@...?subject=Hello%20again"&gt;发送邮件&lt;/a&gt;
+               使用 %20 来替换单词之间的空格，这样浏览器就可以正确地显示文本了。
+12、图像：插入动画图像的语法与插入普通图像的语法没有区别
+          来自文件夹：&lt;img src="...  .jpg" width="50" height="50" /&gt;
+          来自网页：&lt;img src="http://..." width="50" height="50" /&gt;
+          替换文本：无法载入图像时，浏览器将显示这个替代性的文本而不是图像。
+                    &lt;img src="...  .jpg" alt="替换文本"&gt;
+          背景图像：gif 和 jpg 文件均可用作 HTML 背景。如果图像小于页面，图像会进行重复。
+                    &lt;body background="... .jpg"&gt;
+                    &lt;/body&gt;
+          文字中排列：bottom 对齐方式是默认的对齐方式。
+                   下对齐：&lt;img src="... .gif" align="bottom"&gt;
+  中对齐：&lt;img src="... .gif" align="middle"&gt;
+  上对齐：&lt;img src="... .gif" align="top"&gt;
+          浮动：文本左侧：&lt;img src="... .gif" align="left"&gt;
+                文本右侧：&lt;img src="... .gif" align="right"&gt;
+          创建图像映射： 创建带有可供点击区域的图像地图。其中的每个区域都是一个超级链接。
+			&lt;img  src="...  .jpg"  border="0" usemap="#planetmap"  alt="Planets" /&gt;
+		img 元素中的 "usemap" 属性引用 map 元素中的 "id" 或 "name" 属性（根据浏览器），
+		所以我们同时向 map 元素添加了 "id" 和 "name" 属性。
+		&lt;map name="planetmap" id="planetmap"&gt;
+		映射区域
+		&lt;area  shape="circle" coords="180,139,14"  
+			href ="/example/html/venus.html"  target ="_blank"  alt="Venus" /&gt;
+		&lt;/map&gt;
+		转化为图像映射：&lt;a href="/example/html/html_ismap.html"&gt;
+		   &lt;img src="/i/eg_planets.jpg" ismap /&gt;
+		   &lt;/a&gt;
+           定义图像地图：&lt;map&gt;
+           定义图像地图中可点击区域：&lt;area&gt;
+13、表格：每个表格由 table 标签开始。行（row）由 tr 开始。数据由 td 开始（table data）。
+          数据单元格可以包含文本、图片、列表、段落、表单、水平线、表格等等。
+一行一列：&lt;table border="1"&gt;
+          &lt;tr&gt;
+               &lt;td&gt;1,1&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;/table&gt;
+一行三列：&lt;table border="1"&gt;
+          &lt;tr&gt;
+               &lt;td&gt;1,1&lt;/td&gt;
+               &lt;td&gt;1,2&lt;/td&gt;
+               &lt;td&gt;1,3&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;/table&gt;
+两行三列：&lt;table border="1"&gt;
+          &lt;tr&gt;
+               &lt;td&gt;1,1&lt;/td&gt;
+               &lt;td&gt;1,2&lt;/td&gt;
+               &lt;td&gt;1,3&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+               &lt;td&gt;2,1&lt;/td&gt;
+               &lt;td&gt;2,2&lt;/td&gt;
+               &lt;td&gt;2,3&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;/table&gt;
+表头：&lt;tr&gt;
+     &lt;th&gt;...&lt;/th&gt;
+     &lt;/tr&gt;
+空单元格： 加一个空格占位符，就可以将边框显示出来
+                  &lt;td&gt;&nbsp;&lt;/td&gt;
+表格标题：&lt;caption&gt;...&lt;/caption&gt;  标题默认居中
+跨列（横向）：&lt;tr&gt;
+             &lt;th colspan="2"&gt;...&lt;/th&gt;
+             &lt;/tr&gt;
+跨行（纵向）：&lt;tr&gt;
+             &lt;th rowspan="2"&gt;...&lt;/th&gt;
+             &lt;/tr&gt;
+表格边距： 内容与其边框之间的空白：
+          &lt;table cellpadding="10" border="1" &gt;... &lt;/table&gt;  
+           单元格之间的距离:
+                 &lt;table cellspacing="10" border="1" &gt;... &lt;/table&gt;
+背景颜色：表格：&lt;table bgcolor="red" border="1" &gt;... &lt;/table&gt;  
+         单元格：&lt;tr&gt;
+                    &lt;td bgcolor="red"&gt;...&lt;/td&gt;
+                &lt;/tr&gt;
+背景图像：&lt;table background="...  .gif" border="1" &gt;... &lt;/table&gt; 
+   单元格：&lt;tr&gt;
+              &lt;td bgcolor="red"&gt;...&lt;/td&gt;
+          &lt;/tr&gt;
+单元格内排列对齐：&lt;tr&gt;
+               &lt;td align="left"&gt;1,1&lt;/td&gt; 左对齐
+               &lt;td align="right"&gt;1,2&lt;/td&gt; 右对齐
+               &lt;td align="conter"&gt;1,3&lt;/td&gt; 居中
+           &lt;/tr&gt;
+围绕表格的边框：四周：&lt;table frame="box"&gt;...&lt;/table&gt;
+               上方：&lt;table frame="above"&gt;...&lt;/table&gt;
+               下方：&lt;table frame="below"&gt;...&lt;/table&gt;
+               上下：&lt;table frame="hsides"&gt;...&lt;/table&gt;
+               左右：&lt;table frame="vsides"&gt;...&lt;/table&gt;       
+14、列表： 列表项内部可以使用段落、换行符、图片、链接以及其他列表等等。
+	无序列表：使用粗体圆点（典型的小黑圆圈）进行标记
+	&lt;ul&gt;
+	&lt;li&gt;...&lt;/li&gt;
+	&lt;/ul&gt;
+	有序列表： 使用数字进行标记。
+	&lt;ol&gt;
+	&lt;li&gt;...&lt;/li&gt;
+	&lt;/ol&gt;
+	指定开始序号：50起
+	&lt;ol start="50"&gt;
+	&lt;li&gt;...&lt;/li&gt;
+	&lt;/ol&gt;
+	不同标记：&lt;ol type="*"&gt;...&lt;/ol&gt;  数字1，字母A，小写a。罗马大小写
+	定义列表：&lt;dl&gt;
+	&lt;dt&gt;...&lt;/dt&gt;  名词
+	&lt;dd&gt;...&lt;/dd&gt;  解释
+    &lt;/dl&gt;
+15、target属性：规定在何处打开
+16、按钮：&lt;button&gt; 标签定义一个按钮。在 button 元素内部，可以放置内容，比如文本或图像。
+					</pre>
+				</div>
+			</div>
+			<div class="menu">
+				<h1>HTML相关概念</h1>
+				<div class="container">
+					<pre>
+1、块级元素&lt;div&gt;：在浏览器显示时，通常会以新行来开始（和结束）。
+     内联元素&lt;span&gt;： 与 CSS 一同使用时，&lt;span&gt; 元素可用于为部分文本设置样式属性。
+2、类：给元素的类定义CSS样式：
+               &lt;style&gt;
+               .class{...}
+               &lt;/style&gt;
+            和块级元素连用：&lt;div class="class"&gt;...&lt;/div&gt;
+            和内联元素连用：&lt;h1&gt;...&lt;span class="class"&gt;...&lt;/span&gt;...&lt;/h1&gt;
+3、响应式web：RWD 指的是响应式 Web 设计（Responsive Web Design），能够以可变尺寸传递网页，对于平板和移动设备是必需的
+     自己创建：&lt;html lang="en-us"&gt;...&lt;/html&gt;
+     现成的CSS框架：&lt;head&gt;
+		&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+		&lt;link rel="stylesheet" 
+			href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"&gt;
+		&lt;/head&gt;
+4、框架：同一个浏览器窗口中显示不止一个页面。每份HTML文档称为一个框架，并且每个框架都独立于其他的框架。
+          使用框架的坏处：开发人员必须同时跟踪更多的HTML文档，很难打印整张页面
+          不能将 &lt;body&gt;&lt;/body&gt; 标签与 &lt;frameset&gt;&lt;/frameset&gt; 标签同时使用！
+			不过，假如你添加包含一段文本的 &lt;noframes&gt; 标签，
+			就必须将这段文字嵌套于 &lt;body&gt;&lt;/body&gt; 标签内。
+	垂直框架：&lt;frameset cols="25%,50%,25%"&gt;
+	               &lt;frame src="... .html"&gt;
+	          ...
+	               &lt;/frameset&gt;
+	水平框架：&lt;frameset rows="..."&gt;.....&lt;/frameset&gt;
+	混合框架：嵌套一个&lt;frameset&gt;
+	加noresize后框架不可移动：&lt;frame src="... .html" noresize="noresize"/&gt;
+	导航框架：？
+5、内联框架：&lt;iframe src="url"&gt;...&lt;/iframe&gt;  url：位置
+	高度宽度：&lt;iframe src="url" width="200" herght="200"&gt;...&lt;/iframe&gt;
+	删除边框：&lt;iframe src="url" frameborder="0"&gt;...&lt;/iframe&gt;
+	作为链接的目标：&lt;iframe src="url" name="a"&gt;...&lt;/iframe&gt;
+                         &lt;p&gt;&lt;a href="http://..." target="a"&gt;.....&lt;/a&gt;&lt;/p&gt;
+6、实体：文本中不能使用&lt;和&gt;。
+       小于号（&lt;或 &#60;）和大于号（&gt;或&#62;）
+       增加空格的数量，需要使用 &nbsp; 或 &#160; 字符实体
+              还有&。"。'。
+7、url：统一资源定位符，也被称为网址。URL 可以由单词组成，比如 “w3school.com.cn”，
+		或者是因特网协议（IP）地址：192.168.1.253。
+8、颜色：红绿蓝十六进制或RGB， 每种颜色的最小值是0（十六进制：#00）。最大值是255（十六进制：#FF）
+		#000000=rgb(0,0,0) 。#FF0000=rgb(255,0,0)。#C0C0C0=rgb(192,192,192)
+     颜色名： 仅仅有 16 种颜色名被 W3C 的 HTML4.0 标准所支持。它们是：aqua, black, blue, 
+		fuchsia, gray, green, lime, maroon, navy, olive, 
+		purple, red, silver, teal, white, yellow。
+     安全色： 216 跨平台 web 安全色被用来确保：当计算机使用 256 色调色板时，所有的计算机能够正确地显示所有的颜色。
+9、 文档类型：&lt;!DOCTYPE&gt; 声明帮助浏览器正确地显示网页。&lt;!DOCTYPE&gt; 不是 HTML 标签。
+	它为浏览器提供一项信息（声明），即 HTML 是用什么版本编写的。
+					</pre>
+				</div>
+			</div>
+			<div class="menu">
+				<h1>HTML表单</h1>
+				<div class="container">
+					<pre>
+1、表单： 用于收集用户输入
+2、文本输入：&lt;form&gt;
+	......
+	&lt;input type="text" name="..."&gt;
+    &lt;/form&gt;
+3、单选按钮：&lt;form&gt;
+	......
+	&lt;input type="radio" name="..."&gt;...
+    &lt;/form&gt;
+4、提交按钮：&lt;form action="..."&gt;
+	......
+	&lt;input type="submit" name="..."&gt;
+    &lt;/form&gt;
+5、name属性： 如果要正确地被提交，每个输入字段必须设置一个 name 属性。
+6、组合表单定义标题：&lt;form action="..."&gt;
+	&lt;fieldset&gt;
+	&lt;legend&gt;标题&lt;/legend&gt;
+	......
+	&lt;input type="submit" name="..."&gt;
+	&lt;/fieldset&gt;
+    &lt;/form&gt;
+7、下拉元素：&lt;form action="..."&gt;
+	&lt;select name="cars"&gt;
+	&lt;option value="待选择的选项（下拉里的东西 ）"&gt;  待选择的选项（下拉里的东西 ） &lt;/option&gt;
+	&lt;/select&gt;
+	&lt;input type="submit"&gt;  提交
+    &lt;/form&gt;
+8、可点击按钮：&lt;button type="button" onclick="alert('弹出的内容')"&gt;
+		按钮的内容
+	&lt;/button&gt;
+9、预定义选项列表：&lt;form action="..."&gt;
+	&lt;input list="browsers" name="..."&gt;
+	&lt;datalist id="browsers"&gt;
+	&lt;option value="下拉列表预定的内容"&gt;
+	&lt;/datalist&gt;
+	&lt;/form&gt;
+10、输入类型：&lt;input type="..." &gt;
+	type="texe"   定义供文本输入的单行输入字段
+	type="password"   密码字段，输入的字符会被做掩码处理（星号或实心圆）
+	type="submit"   提交表单数据
+	type="radio"   单选
+	type="checkbox"   多选
+	type="button"   按钮
+	type="number"   数字值的输入  可以加限制：&lt;input type="number" name="quantity" min="1" max="5"&gt;
+	type="data"   日期  可限制： &lt;input type="date" name="bday" max="1979-12-31"&gt;
+	type="color"    颜色
+	type="range"    滑块  能够使用如下属性来规定限制：min、max、step、value
+	type="month"    选择月和年
+	type="week"    选择周和年
+	type="time"    选择时间（无时区）
+	type="datatime"    选择时间和日期（有时区）
+	type="datatime-local"    选择日期和时间（无时区）
+	type="email"    电子邮件地址输入    某些智能手机会识别 email 类型，并在键盘增加 ".com" 以匹配电子邮件输入
+	type="seatch"    搜索   表现类似常规文本字段
+	type="tel"    电话号码
+	type="url"    地址    某些智能手机识别 url 类型，并向键盘添加 ".com" 以匹配 url 输入
+11、输入属性：
+	初始值：value  &lt;input type="text"  value="John"&gt;
+	只读（不能修改）：readonly   &lt;input type="text"  value="John"readonly&gt;
+	禁用：disabled   &lt;input type="text"  value="John"disabled&gt;
+	输入框尺寸（以字符计）：size  &lt;input type="text"  value="John" size="50"&gt;
+	允许的最大长度：maxlength  &lt;input type="text"  value="John" maxlength="10"&gt;
+	自动完成：autocomplete  &lt;form action="action_page.php" autocomplete="on"&gt;
+	不对数据进行验证：nobalidate  &lt;form action="action_page.php" novalidate&gt;
+	当页面加载时 &lt;input&gt; 元素应该自动获得焦点：autofocus   &lt;input type="text" name="fname" autofocus&gt;
+	引用表单：form  &lt;input type="text" name="lname" form="form1"&gt;
+	高度和宽度：height width 仅用于 &lt;input type="image"&gt; 
+	          &lt;input type="image" src="img_submit.gif" alt="Submit" width="48" height="48"&gt;
+	预定义：list   &lt;input list="browsers" name="..."&gt;
+	最大最小：max min   适用于如需输入类型：number、range、date、datetime、datetime-local、month、time 以及 week
+	          &lt;input type="date" name="bday" max="1979-12-31"&gt;
+	允许用户输入一个以上的值： multiple   适用于以下输入类型：email 和 file。
+	               &lt;input type="file" name="img" multiple="multiple" /&gt;
+	检查：pattern    适用于以下输入类型：text、search、url、tel、email、and password。
+		使用全局的 title 属性对模式进行描述以帮助用户
+	&lt;input type="text" name="country_code" pattern="[A-z]{3}"
+	title="三个字母的国家代码" /&gt;
+	描述输入框预期提示： placeholder    适用于以下输入类型：text、search、url、tel、email 以及 password。
+	&lt;input type="search" name="user_search" placeholder="提示文字" /&gt;
+	
+	必填：required   适用于以下输入类型：text、search、url、tel、email、password、date pickers、
+		number、checkbox、radio、and file.
+	&lt;input type="text" name="usr_name" required="required" /&gt;
+	合法数字间隔：step    可与 max 以及 min 属性一同使用，来创建合法值的范围
+	适用于以下输入类型：number、range、date、datetime、datetime-local、month、time 以及 week
+	&lt;input type="number" name="points" step="3" /&gt;
+
+					</pre>
+				</div>
+			</div>
+			<div class="menu">
+				<h1>HTML5</h1>
+				<div class="container">
+					<pre>
+1、视频：control 属性供添加播放、暂停和音量控件
+	&lt;video src="movie.ogg"  controls="controls"&gt;...&lt;/video&gt;
+	加尺寸：&lt;video width="320" height="240" src="..." controls="controls"&gt;...&lt;/video&gt;
+	不同格式的: ideo 元素允许多个 source 元素。source 元素可以链接不同的视频文件。浏览器将使用第一个可识别的格式
+	&lt;video width="320" height="240" controls="controls"&gt;
+	&lt;source src="....mp4" type="video/mp4&gt;
+	&lt;source src="....ogg" type="video/ogg&gt;
+	&lt;source src="....webm" type="video/webm&gt;
+	&lt;/video&gt;
+2、&lt;video&gt;标签属性：autoplay就绪后马上播放
+	controls向用户显示控件，如播放按钮
+	loop当媒介文件完成播放后再次开始播放
+	preload页面加载时加载视频并预备播放（如果用outoplay则忽略）
+	src要播放视频的URL
+3、音频：control 属性供添加播放、暂停和音量控件。&lt;audio&gt; 与 &lt;/audio&gt; 之间插入的内容是供不支持 audio 元素的浏览器显示的
+	&lt;audio src="....ogg" controls="controls"&gt;&lt;/audio&gt;
+4、拖放：使元素可拖动：&lt;img draggable="true" /&gt;
+	拖动什么。放到何处。进行放置。
+5、画布：JS
+6、SVG：指可伸缩矢量图形 (Scalable Vector Graphics)，用于定义用于网络的基于矢量的图形，
+	使用 XML 格式定义图形，图像在放大或改变尺寸的情况下其图形质量不会有损失XML
+					</pre>
+				</div>
+			</div>
+			<div class="menu">
+				<h1>XHTML</h1>
+				<div class="container">
+					<pre>
+1、id 属性代替 name 属性：HTML 4.01 针对下列元素定义 name 属性：a, applet, frame, iframe, img, 和map。
+	在 XHTML 中不鼓励使用 name 属性，应该使用 id 取而代之。
+	在 "/" 符号前添加一个额外的空格，以使 XHTML 与当今的浏览器相兼容
+2、语言属性：&lt;div lang="no" xml:lang="no"&gt;...&lt;/div&gt;
+3、DTD：文档声明类型。&lt;!DOCTYPE htmlPUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+		"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
+	STRICT（严格类型）： 包含没有被反对使用的或不出现在框架结构中的元素和属性
+		&lt;!DOCTYPE .../xhtml1-strict.dtd"&gt;
+	TRANSITIONAL（过渡类型）：包含严格 DTD 中的一切，外加那些不赞成使用的元素和属性
+		&lt;!DOCTYPE .../xhtml1-transitional.dtd"&gt;
+	FRAMESET（框架类型）： 包含过渡 DTD 中的一切，外加框架。
+		&lt;!DOCTYPE .../xhtml1-frameset.dtd"&gt;
+4、空标签：&lt;hr&gt; , &lt;br&gt; 和 &lt;img&gt;
+					</pre>
+				</div>
+			</div>
+		</div>
+
+		
+		</div>
+	</body>
+
+</html>

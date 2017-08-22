@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>锋利的jquery</title>
+		<link rel="icon" type="text/css" href="logo.ico" />
+		<!--引入各种文件-->
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/nav.css" />
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		<!--	<link rel="stylesheet" type="text/css" href="css/footer.css"/>-->
+		<script src="script/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="script/nav.js" type="text/javascript" charset="utf-8"></script>
+		<script src="script/main.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			
+		</script>
+
+	</head>
+
+	<body>
+		<!--头部-->
+		<div id="header">
+			<!--导航-->
+			<div class="nav">
+				<!--logo-->
+				<div class="logo" title="返回首页">
+					<a href="http://www.baitt1994.xyz/" class="navImg">
+						<img src="img/logo.png" />
+					</a>
+					<div class="subImg" id="subImg">
+						<div class="arrow">
+							<img src="img/arrow.png" />
+						</div>
+						<div class="home">
+							<span id="">
+								返回首页
+							</span>
+						</div>
+					</div>
+				</div>
+				<!--主导航-->
+				<div class="mainNav">
+					<ul>
+						<li>
+							<a href="http://www.baitt1994.xyz/life.html" id="txt">life</a>
+							<div class="subLife" id="sub">
+								<a href="http://www.baitt1994.xyz/life.html">
+									<img src="img/eat.png" />
+									<span id="">食谱</span>
+								</a>
+								
+								<a href="http://www.baitt1994.xyz/life.html">
+									<img src="img/nav/play.png" />
+									<span id="">皂片</span>
+								</a>
+								
+							</div>
+						</li>
+						<li>
+							<a href="http://www.baitt1994.xyz/studyNotes.html" class="studyNotes" id="txt">studyNotes</a>
+							<div class="subStudy" id="sub">
+								<a href="http://www.baitt1994.xyz/studyNotes/css.html">
+									<img src="img/nav/css.png" />
+									<span id="">
+										CSS/CSS3
+									</span>
+								</a>
+								<a href="http://www.baitt1994.xyz/studyNotes/html.html">
+									<img src="img/nav/html.png" />
+									<span id="">
+										HTML/HTML5
+									</span>
+								</a>
+								<a href="http://www.baitt1994.xyz/studyNotes/jquery.html">
+									<img src="img/nav/jq.png" />
+									<span id="">
+										锋利的jquery
+									</span>
+								</a>
+								<a href="http://www.baitt1994.xyz/studyNotes/javascript0.html">
+									<img src="img/nav/js1.png" />
+									<span id="">
+										javascript入门经典
+									</span>
+								</a>
+								<a href="http://www.baitt1994.xyz/studyNotes/photoshop.html">
+									<img src="img/nav/ps.png" />
+									<span id="">
+										photoshop
+									</span>
+								</a>
+								<a href="http://www.baitt1994.xyz/studyNotes/javascript.html">
+									<img src="img/nav/js.png" />
+									<span id="">
+										javascript权威指南
+									</span>
+								</a>
+							</div>
+						</li>
+						<li>
+							<a href="http://www.baitt1994.xyz/more.html" class="navMore" >more</a>
+							<div class="subMore" id="subM">
+								<div class="arrow">
+									<img src="img/arrow.png" />
+								</div>
+								<div class="subMoreNav">
+									<ul>
+										<li>
+											<a href="https://github.com/baiwh">
+												
+												<span id=""><img src="img/icon/github.png" />myGithub</span>
+											</a>
+										</li>
+										<li>
+											<a href="">
+												
+												<span id=""><img src="img/icon/email.png" />联系我</span>
+											</a>
+										</li>
+									</ul>
+
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<!--搜索框-->
+				<div class="search">
+					<input type="text" name="" id="" class="inp" value="搜索功能待完善" />
+					<input type="button" name="" class="searchButton" value="搜索" />
+				</div>
+			</div>
+		</div>
+
+		<!--主体-->
+		<div id="content" >
+			<div class="menu">
+				<h1>第一章</h1>
+				<div class="container">
+					<pre>
+1.等待Dom元素加载完毕
+     $(document).ready(function(){    });
+2.获取对象
+     jquery对象：
+          $("#id").html()；
+     Dom对象：
+          document.getElemetById("id").innerHTML;
+3.jq对象转换成DOM对象
+     var $cr=$("#cr");              //jq对象
+     var cr=$cr[0];                    //DOM对象  或 var cr=$cr.get(0);
+     alert(cr.checked)              //检测是否被选中
+4.dom对象转成jq对象
+     var cr=document.getElementById("cr");
+     var $cr=$(cr);
+5.解决和其他库的冲突
+     P16
+					</pre>
+				</div>
+			</div>
+			<div class="menu">
+				<h1>第二章 选择器</h1>
+				<div class="container">
+					<pre>
+1.css选择器
+     标签选择器：div{...}
+     id选择器：#id{...}
+     类选择器：div.class{...}
+     群组选择器：p,div.a{...}
+     后代选择器：#links a{...}
+     通配选择器：*{...}
+     伪类选择器、子类选择器、临近选择器、属性选择器
+2.jq基本选择器
+     $(".class").css{...};
+     $("#id").css{...};
+     $("div").css{...};
+     $("*").css{...};
+     $("span,#two").css{...};
+3.层次选择器
+     某祖元素里所有的某后代元素：     $("div span").css{...};
+     某父元素里所有的子元素：     $("div&gt;span").css{...};
+     紧接在.one后的下一个div同辈元素：     $(".one+div").css{...};              
+     		等价于     $(".one").next("div");
+     two后的所有div同辈元素：     $("#two~div").css{...};                         
+     		等价于     $("#two").nextAll("div");
+     选取无论前后的所有同辈元素：     $("#three").siblings("div").css{...};
+4.基本过滤选择器
+     :first          //第一个元素。     $("div:first");          所有div中第一个元素
+     :last          //最后一个元素。     $("div:last");          
+     :not(selector)     //去除所有与给定选择器匹配的元素     $("input:not(.myclass)");     
+     		选取class不是myclass的input元素
+     :even     //选取索引是偶数的所有元素，索引从0开始     $("div:even");     索引是偶数的div
+     :odd     //索引是奇数的所有元素     $("div:odd");     
+     :eq(n)     //索引等于n的元素，索引从0开始     $("div:eq(1)");     索引等与1的div
+     :gt(n)     //索引大于n的     $("div:gt(n)");     
+     :lt(n)     //索引小于n的     $("div:lt(n)");
+     :header     //所有的标题元素     $(":header");     所有的h1,h2,h3.......
+     :animated     //当前正在执行动画的所有元素     $("div:animated");     正在执行动画的div
+     :focus     //当前获取焦点的元素     $(":focus");     
+5.内容过滤选择器
+     :contains(aaa)     //含有文本内容为aaa的元素     $("div:contains('aaa')")     含有aaa的div
+     :empty     //不包含子元素或者文本的空元素     $("div:empty")
+     	has(元素)     //含有选择器所匹配的元素的元素     $("div:has(p)")     $("div:has('.mini')")     
+     		含有.mini元素的div
+     :parent     //含有子元素或文本的元素     $("div:parent")     
+6.可见性过滤选择器
+     :hidden     //所有不可见元素（diaplay:none、type="hidden"、visibility:hidden）     
+     			$("div:hidden")          所有不可见的div
+     :visible     //所有可见元素     $(":visible")
+7.属性过滤选择器
+     [attribute]     //拥有此属性的元素     $("div[title]")     拥有title属性的div
+     [attribute=value]     //属性值为value的     $("div[title=value]")
+     [attribute!=value]     //属性值不等于value的    $("div[title!=value]")   
+     [attribute^=value]     //属性值以value开始的     $("div[title^=value]")
+     [attribute$=value]     //属性值以value结束的     $("div[title$=value]")
+     [attribute*=value]     //属性值含有value的     $("div[title*=value]")
+     [attribute|=value]     //属性值等于value字符串或以该字符串为前缀（后边带连字符-）     
+     				$("div[title|='value']")
+     [attribute~=value]     
+     		//属性用空格分隔的值中包含一个给定的元素     $("div[title~='uk']")     
+     			属性值title用空格分隔的值中包含字符uk的元素
+     [attribute1][attribute2][attributeN]     
+     		//用属性选择器合并成一个符合属性选择器，满足多个条件，每选择一次缩小一次范围     
+     			$("div[id][title$='text']")     拥有属性id并且属性title以test结束的div
+8.子元素过滤选择器
+     :nth-child(n/even/odd/equation)     
+     	//选取每个父元素下的第n个子元素或者奇偶元素（n从1算起）    $("div.one:nth-child(2)")     
+     			每个class为one的div父元素下的第二个子元素      $("div.one:nth-child(even)")     
+     					每个父元素下索引值是偶数的元素
+     :first-child     //每个父元素的第一个子元素     $("div.one:first-child")
+     :last-child     //每个父元素的最后一个子元素     $("div.one:last-child")
+     :only-child     //父元素中只有它一个子元素的元素     $("ul li:only-child")     
+     		在ul中选取是唯一子元素的li元素
+9.表单对象过滤选择器
+     :enabled     //所有可用元素     $("#form1:enabled")     选取id为form1内的所有可用元素
+     :disabled     //所有不可用元素     $("#form1:disabled")     
+     :checked     //所有被选中的元素（单选、复选）     $("input:checked")     所有被选中的input
+     :selected     //所有被选中的选项卡（下拉列表）     $("select option:selected")     所有被选中的选项元素
+10.表单选择器
+     :input     //选取所有&lt;input&gt;&lt;textarea&gt;&lt;select&gt;&lt;button&gt;元素     $(":input")
+     :text     //所有的单行文本框
+     :password     //所有密码框
+     :radio     //所有单选框
+     :checkbox     //所有多选框
+     :submit     //所有提交按钮
+     :image     //所有图像按钮
+     :reset     //所有重置按钮
+     :button     //所有按钮
+     :file     //所有上传域
+     :hidden     //所有不可见元素
+11.不能用的特殊字符
+     .  #  (  )  [  ]
+     偶尔可能遇到，直接用会出错，可使用转义符，在每个特殊符号前加\\
+     $("#id#b")转义后$("#id\\#b")
+12.选择器中的空格？
+     后代选择器与过滤选择器不同
+     $(".test :hidden")     带空格     选取class为test的元素里的隐藏元素
+     $(".test:hidden")     不带空格     选取隐藏的class为test的元素
+
+
+“查看更多”思路：
+	1.先写html：div（class）、ul、li（a、i、）、div（a、span显示更多）
+	2.通过索引获取要隐藏的部分，并隐藏
+	3.获取“更多”按钮
+	4.如果要隐藏的显示了。则隐藏并把文本改成‘更多’去掉高亮。
+	     否则。显示并改成‘收起’加上高亮
+	     （或使用toggle()交替一组动作）
+	5.链接不跳转。在click里添加return false
+					</pre>
+				</div>
+			</div>
+			<div class="menu">
+				<h1>第三章 DOM操作</h1>
+				<div class="container">
+					<pre>
+1.查找元素节点
+     var $li=$("ul li:eq(1)");          //获取ul里第二个li
+     var liTxt=$li.text();               //获取其文本内容
+     alert(li_txt);                         
+2.查找属性节点
+     var $para=$("p");          //获取p节点
+     var pTxt=$para.attr("title");          //获取其title属性
+3.创建元素节点
+     var $li1=$("&lt;li&gt;&lt;/li&gt;");          //创建节点          $("html")
+     $("ul").append($li1);               //插入到文档中
+4.创建文本节点（给创建的元素节点添加文本内容）
+     var $li1=$("&lt;li&gt;文本内容&lt;/li&gt;");          //创建节点$("html")包括内容
+     $("ul").append($li1);               //插入到ul节点中
+5.创建属性节点（创建节点时一起创建）
+     var $li1=$("&lt;li title='tit'&gt;&lt;/li&gt;");          //创建节点$("html")包括属性也可以包括文本
+     $("ul").append($li1);               //插入到文档中
+6.插入节点
+     append()          //向每个匹配的元素内部追加内容          &lt;p&gt;html&lt;b&gt;jQ&lt;/b&gt;&lt;/p&gt;
+     appendTo()          //将所有匹配的元素追加到指定的元素中          &lt;p&gt;html&lt;b&gt;jQ&lt;/b&gt; &lt;/p&gt;
+     prepend()          //向每个匹配的元素内部前置内容          &lt;p&gt;&lt;b&gt;jQ&lt;/b&gt; html&lt;/p&gt;
+     prependTo()          //将所有匹配的元素前置到指定的元素中          &lt;p&gt;&lt;b&gt;jQ&lt;/b&gt; html&lt;/p&gt;
+     after()          //在每个匹配的元素之后插入内容          &lt;p&gt;html&lt;b&gt;jQ&lt;/b&gt; &lt;/p&gt;
+     insertAfter()          //将所有匹配的元素插入到指定的元素后面          &lt;p&gt;html&lt;b&gt;jQ&lt;/b&gt; &lt;/p&gt;
+     before()          //在每个匹配的元素之前插入内容          &lt;b&gt;jQ&lt;/b&gt; &lt;p&gt;html&lt;/p&gt;
+     insertBefore()          //将所有匹配的元素插入到指定的元素前面          &lt;b&gt;jQ&lt;/b&gt; &lt;p&gt;html&lt;/p&gt;
+7.移动DOM元素
+     var $li1=$("ul li:eq(1)");          //获取ul里第二个li
+     var $li1=$("ul li:eq(2)");          //获取ul里第三个li
+     $li2.insertBefore($li1);               //把li2放到li1前边
+ 8.用remove（）方法删除节点
+     $("ul li:eq(1)").remove;          //获取ul中第二个节点并删除
+     删除后该节点所包含的所有后代节点将同时被删除，绑定事件、附加数据失效，返回值是一个指向已被删除节点的引用，
+     删除后可再使用：
+          var $li=$("ul li:eq(1)").remove();          //获取并删除
+          $li.appendTo("ul");               //刚才删除的再重新添加回来
+          或$("ul li:eq(1)").appendTo("ul");
+     通过传递参数来选择性的删除元素：$("ul li").remove("li[title!=菠萝]");          //删除li中属性title不等于菠萝的li
+9.用detach（）方法删除
+     可以在将来再使用这些被删除的匹配的元素。所有绑定的事件、附加的数据等都会保留下来。
+     var $li=$("ul li:eq(1)").detach();          //获取并删除
+     $li.appendTo("ul");               //重新追加，绑定的事件还在
+10.用empty（）方法删除
+     并不是删除节点，而是清空节点(清空其中的文本内容 或 清空元素中的所有后代节点）
+     $("ul li:eq(1)").empty();
+11.复制节点
+     $("ul li").click(functin(){
+          $(this).clone().a[[endTo("ul");          //点击li后复制一个li并追加到ul中
+          $(this).clone(true).appendTo("body");          //新元素也具有复制功能
+          })
+     clone中传递了一个参数true，其含义是复制元素的同时复制元素中所绑定的事件。因此该副本也同样具有复制功能
+12.替换节点
+     将所有匹配的元素都替换成指定的html或者DOM元素。
+     $("p").replaceWith("&lt;strong&gt;。。。&lt;/strong&gt;");
+     或$("&lt;strong&gt;。。。&lt;/strong&gt;").replaceAll("p");
+     若替换之前已绑定事件，替换后将会消失。需再新元素上重新绑定事件。
+13.包裹单独节点
+     可在文档中插入额外的结构化标记。不会破坏原文档的语义。将每个匹配的元素都包裹起来
+     $("strong").wrap("&lt;b&gt;&lt;/b&gt;");          //用b把strong包裹起来
+14.包裹多个节点
+     将所有匹配的元素用一个元素来包裹。如果被包裹的多个元素间有其他元素，这些元素会被放大包裹元素之后
+     $("strong").wrapAll("&lt;b&gt;&lt;/b&gt;");
+15.包裹子内容
+     将每个匹配的元素的子内容（包括文本节点）用其他结构化的标记包裹起来
+     $("strong").wrapInner("&lt;b&gt;&lt;/b&gt;");
+16.获取属性
+     var $para=$("p");          //获取节点
+     var pTxt=$para.attr("title");          //获取节点属性$para.attr("属性名称")
+17.设置属性
+     $("p").attr("title","your title");          //设置单个属性
+     $("p").attr({"title":"your title","name":"test"});          
+			//设置多个属性。({”名“：”值“，”名“：”值“})
+18.删除属性
+     $("p").removeAttr("title");
+19.获取样式
+     var pClass=$("p").attr("class");
+20.设置样式
+     $("p").attr("class","high");          //原有的class被替换成新的
+21.追加样式
+     $("p").addClass("another");          
+		//p将同时拥有两个class，即class="high another"。
+			如果给一个元素添加了多个class，那么就相当于合并了他们的样式。
+			如果不同的class设定了同一个样式属性，则后者覆盖前者。
+22.移除样式
+     $("p").removeClass("high");          //删除high
+     $("p").removeClass("high").removeClass("another");          //两个都删除
+     $("p").removeClass("high another");          //两个都删除
+     $("p").removeClass();          //删除p的所有class
+23.切换样式
+     交替执行两个代码，交替一组动作
+     $tooggleBtn.toggle(function(){
+          代码1
+          }.function(){
+          代码2
+     })
+     控制样式上的重复切换。类名存在则删除它，如果类名不存在则添加它
+     $("p").toggleClass("another");
+24.判断是否含有某样式
+     如果有则返回true，否则返回false
+     $("p").hasClass("another");
+     等价于：$("p").is(".another");
+25.html()方法
+     var pHtml=$("p").html();          //读取某个元素中的HTML内容
+     $("p").html("&lt;strong&gt;......&lt;/strong&gt;");          //设置某元素的HTML代码。可用于XHTML。不可用于XML
+26.text()方法
+     var pText=$("p").text();          //获取p的文本内容
+     $("p").text(".......");          //设置文本内容
+27.val()方法
+     设置和获取元素的值。文本框、下拉列表、单选框，它都可以返回元素的值。
+		如果元素为多选，则返回一个包含所有选择的值的数组。表单中也很常用
+     focus()          //处理获得焦点时的事件
+     blur()          //处理失去焦点时的事件
+28.children()方法
+     获取匹配元素的子元素集合。只考虑子元素而不考虑其他后代元素
+     var $ulli=$("ul").children();          //获取ul的子元素
+     alert($ulli.length);               //ul子元素的个数
+29.next()方法
+     获取匹配元素后面紧邻的同辈元素
+     var $p1=$("p").next();          //p后边紧邻的同辈元素
+30.prev()方法
+     匹配元素前面紧邻的同辈元素
+     var $p1=$("p").prev();          //p前边紧邻的同辈元素
+31.siblings()方法
+     匹配元素前后所有同辈元素
+     var $p1=$("p").siblings();          //p的同辈元素
+32.closest()方法
+     取得最近的匹配元素。首先检查当前元素是否匹配，匹配则返回元素本身。
+		不匹配则向上查找父元素，逐级向上直到匹配。什么都没找到则返回空的jQ对象。
+     $("li").closest("ul");          //$(目标元素).closest(最近的元素");
+33.parent()、parents()、closest()的区别
+     parent()          //每个匹配元素的父级元素。返回一个元素节点          $(".item").parent()
+     parents()          //每个匹配元素的祖先元素。返回多个父节点
+     closest()          //从元素本身开始，逐级向上级元素匹配，并返回最先匹配的祖先元素。返回匹配的第一个元素节点
+34.css-Dom
+     读取和设置各种style属性。无法通过它来提取到通过外部CSS设置的样式信息
+     $("p").css("clolr");          //获取p的样式属性         
+     $("p").css("clolr","red");          //设置p的样式属性
+     $("p").css({"clolr":"red" ,"background":"red"});          //设置多个样式属性
+          如果值是数字，会自动转化为像素值。
+     $("p").css("opacity","0.5");          //设置透明度
+     $("p").css("height");          //获取p的高度          或$("p").height(); 
+     $("p").css.height(100);          //设置p的高度，如果传递的值是一个数字，则默认单位为px。其他单位则必须传递一个字符串
+     $("p").css.height("100em");
+          css()获取的是设置的高度。height()获取的是页面中的实际高度，与设置无关且不带单位。宽度同理
+35.offset()方法
+     获取元素在当前视窗的相对偏移。返回的对象包含两个属性。即top和left。只对可见元素有效
+     var offset=$("p").offset();          //获取p的offset()
+     var left=offset.left;               //获取左偏移
+     var top=offset.top;               //获取上偏移
+36.position()方法
+     获取元素相对于最近的一个position样式属性设置为relative或者absolute的祖父节点的相对偏移。返回top和left
+     var position=$("p").position();          //获取p的position()
+     var left=position.left;               //获取左偏移
+     var top=position.top;               //获取上偏移
+37.scrollTop()方法和scrollLeft()方法
+     获取元素的滚动条距顶端和左侧的距离
+     var $p=$("p");     
+     var scrollTop=$p.scrollTop();          //获取元素的滚动条距顶端的距离
+     var scrollLeft=$p.scrollLeft();          //获取元素的滚动条距左侧的距离
+     可指定参数，控制元素的滚动条滚动到指定位置
+     $("textarea").scrollTop(300);          //元素的垂直滚动条滚动到指定位置
+     $("textarea").scrollLeft(300);          //元素的横向滚动条滚动到指定位置
+
+
+图片放大页面思路：
+	1.先完成ul、li、a（href、class、title、img）、img的html。
+	2.为a增加mouseover显示title和mouseout隐藏title事件。
+	3.鼠标移入时要追加的效果和移出时要删除的div
+	4.移除a自带的title
+	5.让div跟着鼠标移动mousemove
+	6.给追加的图片添加文字说明。
+					</pre>
+				</div>
+			</div>
+			<div class="menu">
+				<h1>第四章 事件和动画</h1>
+				<div class="container">
+					<pre>
+1.执行时机
+     javascript：所有元素包括关联文件完全加载到浏览器后执行
+                         window.onload=function(){...}
+     jquery：DOM就绪就可以操作，不需要等待所有图片下载完毕。但对于未加载完毕的元素部分属性不一定有效
+                         $(document).ready(function(){...})
+                  对于未加载完毕的。load()方法会在元素的onload事件中绑定一个处理函数。
+					如果处理函数绑定给window对象，则所有内容（窗口、框架、对象、图像）加载完毕后触发。
+					如果绑定在元素上，则元素内容加载完毕后触发
+                         $(window).load(function(){...})
+2.使用次数
+     javascript：事件一次只能保存对一个函数的引用，他会自动用后面的函数覆盖前面的函数，不能在现有的行为上添加新的行为。
+		为了达到两个函数顺序触发的效果，只能再创建一个新的javascript方法来实现
+     jquery：在现有的行为上追加新的行为，根据注册的顺序依次执行
+3.简写
+     $(document).ready(function(){...})
+     可简写为
+     $(function(){...}
+     $(document)也可以简写为$()。当$()不带参数时，默认参数就是document，$().ready(function(){...})
+4.事件绑定
+     bind(type[.data],function);        //bind（事件类型 [ 可选参数 ]，绑定的处理函数）
+5.this
+     引用的是携带相应行为的DOM元素，使用$(this)将其转换为jquery对象后可以使用jquery中的方法
+6.多次使用的可以定义为一个局部变量
+     var $content=$(this).next();
+7.合成事件hover()
+     hover（enter，leave）；
+     用于模拟光标悬停事件。当光标移动到元素上时，会触发指定的第一个函数，移出时触发第二个。
+8.合成事件toggle()
+     toggle(fn1,fn2,...fnN);
+     用于模拟鼠标连续单击事件，第一次单击触发第一个函数，再次单击触发第二个，依次触发直到最后一个，轮番调用。
+     另一个作用是切换元素的可见状态。
+9.事件冒泡
+     一个元素嵌套在另一个元素里，都被绑定了同一个事件。事件会按照DOM的层次结构像水泡一样不断向上直至顶端。
+     解决办法：
+		事件对象：为函数添加一个参数，单击element时，事件对象就被创建了。这个事件对象只有事件处理函数才能访问到。
+			事件处理函数执行完毕后，事件对象就被销毁了。
+		     $("element").bind("click",function(事件对象){...});
+		停止事件冒泡：阻止事件中其他对象的事件处理函数被执行。加在哪段就只会执行相应的内容，不会触发其他元素上的
+		     event.stopPropagation();
+		阻止默认行为：网页中的元素有自己默认的行为（例如提交前先验证）
+		     event.preventDefault();
+		事件捕获：和事件冒泡相反，是从最顶端往下开始触发。
+     jquery不支持。
+10.同时对事件对象停止冒泡和默认行为
+     在事件处理函数中返回false。把event.stopPropagation();或event.preventDefault();改为return false;
+11.事件对象的属性
+     event.type：获取事件类型
+     event.preventDefault()：阻止默认的事件行为
+     event.stopPropagation()：阻止事件的冒泡
+     event.target：获取到触发事件的元素
+     event.relatedTarget：访问mouseover和mouseout所发生的元素
+     event.pageX和event.pageY：获取到光标相对于页面的x坐标和y坐标。如果有滚动条还要加上滚动条的宽度和高度
+     event.which：鼠标单击事件中获取到鼠标的左、中、右键。在键盘事件中获取键盘的按键
+     event.metaKey：键盘事件中获取&lt;ctrl&gt;按键
+12.删除所有事件
+     $("#id").unbind("click");
+     unbind([type],[data]);          //unbind（[ 事件类型 ]，[ 要移除的函数 ]）；
+     如果没有参数，则删除所有绑定的事件。
+13.移除其中一个事件
+     为匿名函数指定一个变量     myfun1=function(){...}
+     unbind("click",myFun1);
+14.trigger()方法
+     常用模拟：用户进入页面就触发click事件，而不用主动单击。
+                    $("#btn").trigger("click");          //简化写法$("#btn").click();
+     触发自定义事件：绑定一个自定义事件$("#btn").bind("aaaaa",function(){...});
+                              $("#btn").trigger("aaaaa");
+     传递数据：tigger(type,[data])第一个参数是要触发的事件类型，第二个是要传递给事件处理函数的附加数据，
+			以数组形式传递。通过传递一个参数给回调函数来区别这次事件是代码触发的还是用户触发的。
+                    $("#btn").trigger("myclick",["自定义","事件"];          //传递两个数据
+     执行默认操作：trigger()方法触发事件后，会执行浏览器默认操作。 $("input").trigger("focus");
+     如果不想行默认操作： $("input").triggerHandler("focus");
+15.一次性绑定多个事件类型
+    $(function(){
+          $("div").bind("mouseover mouseout",function(){
+               $(this).toggleClass("over")
+          });
+     });
+16.添加事件命名空间
+     $(function(){ $("div").bind("click.del",function(){...}) });
+     删除事件时只需要指定命名空间即可。相同事件类型，不同命名空间可以不同执行
+17.hide()方法
+     会将该元素的display样式改为none。在此之前会先记住原来的display属性值
+18.show()方法
+     将元素的display样式根据之前hide()方法记住的display属性值设置为先前的显示状态（block或inline）。
+19.让元素动起来
+     指定一个速度参数。slow在600毫秒内慢慢显示出来。normal是400毫秒。fast是200毫秒。关键字要加引号，数字不用
+     $("element").show("slow");
+     $("element").show(1000);          //使元素在1秒内显示出来
+     hide会同时减少内容的宽、高、不透明度，直至为0。show会逐渐增大直至完全显示
+20.fadeIn()方法和fadeout()方法
+     只改变元素的不透明度。fadeOut()在指定的一段时间内降低元素的不透明度，直到完全消失。fadeIn()则相反
+21.slideUp()方法和slideDown()方法
+     只改变元素的高度。slideDown()方法，将元素由上至下延伸显示。slideUp()方法，由下到上缩短隐藏
+22.自定义动画
+     animate(params,speed,callback);
+     animate（包含样式属性及值的映射，速度可选，动画完成时执行的函数可选）
+     为了能影响该元素的top、left、bottom、right样式属性，必须先把元素的position样式设置为relative或者absolute
+      animate({left:"500px"},3000);
+23.累加、累减动画
+     animate({left:"+=500px"},3000);             //在当前位置累加。。累减-=
+24.多重动画
+     同时执行多个动画：
+          animate({left:"500px",height:"200px"},3000);           //向右滑动的同时放大高度
+     按顺序执行多个动画（动画队列）：
+          $(this).animate({left:"500px"},3000);
+          $(this).animate({height:"200px"},3000);
+          或$(this).animate({left:"500px"},3000).animate({height:"200px"},3000);
+25.动画回调函数（适用于所有动画效果方法）
+     css方法并不会加入到动画队列中，而是立即执行。可以使用回调函数对非动画方法实现排队。
+		只要把css方法写在最后一个动画的回调函数里即可。
+     animate({left:"500px"},3000,function(){$(this).css(...);});
+26.停止元素的动画
+     stop([clearQueue],[fotoEnd]);
+     stop ( [ 是否要清空未执行完的动画队列 ] , [ 是否直接将正在执行的动画跳转到末状态 ] ) ;
+     clearQueue和fotoEnd是可选参数，值为true或flase。
+     如果直接使用stop()方法，会立即停止当前正在进行的动画，如果接下来还有动画等待继续进行，则以当前状态开始接下来的动画
+     stop()方法会结束当前正在进行的动画，并立即执行队列中的下一个动画。
+     第一个参数设为true，会把当前元素接下来尚未执行完的动画队列都清空
+     第二个参数用于让正在执行的动画，直接到达结束时刻的状态，通常用于后一个动画需要基于前一个动画的末状态的情况，
+			可通过stop(false,true)这种方式来让当前动画直接到达末状态
+     也可以两者结合stop(true,true)，既停止当前动画并直接到达当前动画的末状态，并清空动画队列
+     只能设置正在执行的动画的最终状态，而没有提供直接到达未执行动画队列最终状态的方法
+27.判断元素是否处于动画状态
+     避免动画积累。判断是否处于动画状态，不处于才添加新的动画，否则不添加。
+     if(!$(element).is(":animated")){新动画};
+28.延迟动画
+     $(this).animate({left:"500px"},3000).delay(1000);
+29.其他动画方法
+     toggle()：切换元素的可见状态
+     slideToggle()：通过高度变化来切换匹配元素的可见性
+     fadeTo()：把元素的不透明度以渐进方式调整到指定的值
+     fadeToggle()：通过不透明度变化来切换匹配元素的可见性
+30.用animate()方法代替其他所有的动画方法
+     用animate()方法代替show()：
+                    $("p").animate({height:"show",width:"show",opacity:"show"},400);
+     用animate()方法代替fadeIn()：
+                    $("p").animate({opacity:"show"},400);
+     用animate()方法代替slideDown()：
+                    $("p").animate({height:"show"},400);
+     用animate()方法代替fadeTo()：
+                    $("p").animate({opacity:"0.6"},400);
+					</pre>
+				</div>
+			</div>
+			<div class="menu">
+				<h1>第五章 表单表格</h1>
+				<div class="container">
+					<pre>
+1.获取和失去焦点改变样式
+     css样式：input:focus,textarea:focus{ border: 1px solid paleturquoise;  background: #AFEEEE;  }
+     jq给文本框添加事件： .focus{  border: 1px solid paleturquoise;  background: #AFEEEE;  }
+                                   $(function(){
+                                         $(":input").focus(function(){               //获取焦点的事件
+                                                  $(this).addClass("focus");          //添加.focus的样式
+                                         }).blur(function(){                              //失去焦点事件
+                                                  $(this).removeClass("focus");               //移除样式
+                                         })
+                                     })
+2.评论框高度变化
+           $(function(){
+                var $comment=$("#comment");               //转换成jq
+                $(".bigger").click(function(){                         //点击事件
+                    if($comment.height() &lt; 500){                    //如果高度小于500
+                        $comment.animate({height:"+=50"},400);          //0.4秒内完成累加50的动画
+                    }
+                });
+                $(".smaller").click(function(){                    //点击事件
+                    if($comment.height() &gt; 50){                    //如果高度大于50
+                        $comment.animate({height:"-=50"},400);          //0.4s内完成累减50的动画
+                    }
+                })
+            })
+3.滚动条高度变化
+            $(function(){
+                var $comment=$("#comment");                    //转换
+                $(".up").click(function(){                                   //点击事件
+                    if(!$comment.is(":animated")){                    //检查是否处于动画状态
+                        $comment.animate({scrollTop:"-=50"},400);               //0.4s内滚动条累减50
+                    }
+                });
+                $(".down").click(function(){                              //点击事件
+                    if(!$comment.is(":animated")){                    //检查是否处于动画状态
+                        $comment.animate({ scrollTop:"+=50"},400);               //0.4s内滚动条累加50
+                    }
+                });
+            })
+4.复选框应用
+     通过控制元素的checked属性来达到目的。如果属性的值为true说明被选中，如果值为false说明没被选中
+     全选：通过attr()方法来设置属性checked的值，使之选中
+                $("#checkedAll").click(function(){
+                    $("[name=items]:checkbox").attr("checked",true);
+                })
+     全不选：将复选框的checked属性值设置为false
+                $("#checkedNo").click(function(){
+                    $("[name=items]:checkbox").attr("checked",false);
+                })
+     反选：循环每一个复选框进行设置，取他们值的反值。如果是true就设置为false，如果是false就设置为true，可使用非！。
+                $("#checkedRev").click(function(){
+                    $("[name=items]:checkbox").each(function(){
+                        this.checked=!this.checked;
+                    })
+                })
+     提交：将选中的项输出，可以通过val()方法获取选中的值
+                $("#send").click(function(){
+                    var str="你选中的是：";
+                    $("[name=items]:checkbox:checked").each(function(){
+                        str += $(this).val()+"\n";
+                    })
+                    alert(str);
+                })
+5.下拉框应用
+
+6.表单验证
+
+7.普通隔行变色
+
+8.单选框控制表格行高亮
+
+9.复选框控制表格行高亮
+
+10.表格展开关闭
+
+11.表格内容筛选
+
+12.放大缩小字号
+
+13.网页选项卡
+
+14.网页换肤
+
+					</pre>
+				</div>
+			</div>
+			<div class="menu">
+				<h1>未完待续。。</h1>
+				<div class="container">
+					<pre>
+						
+					</pre>
+				</div>
+			</div>
+		</div>
+
+		<!--底部-->
+		<div id="footer">
+			<!--<div class="beian">
+				<a href="http://www.miitbeian.gov.cn">冀ICP备17021530号</a>
+			</div>-->
+
+		</div>
+	</body>
+
+</html>

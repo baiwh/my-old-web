@@ -1,0 +1,43 @@
+#content{
+	position: relative;
+	width: 1000px;
+	margin: 100px auto;
+	top: 0px;
+	
+}
+/*标题+内容的div*/
+#content .menu{
+	
+}
+/*标题*/
+#content .menu h1{
+	background: #E5F8FB;
+	font-size: 20px;
+	height: 45px;
+	line-height: 45px;
+	padding: 0px 25px;
+	margin: 3px 0px;
+	border: 2px solid #FFFFFF;
+	border-radius: 10px;
+	cursor: pointer;
+	color: #3399FF;
+}
+#content .menu h1:hover{
+	border: 2px solid #3399FF;
+}
+/*内容的div*/
+#content .menu .container{
+	display: none;
+	border: 2px solid #B3EAF2;
+	border-radius: 10px;
+	margin: 0px 5px;
+	padding: 0px 0px;
+}
+/*内容的pre*/
+#content .menu .container pre{
+	font-size: 15px;
+}
+
+.blue{
+	"border","2px solid #3399FF"
+}

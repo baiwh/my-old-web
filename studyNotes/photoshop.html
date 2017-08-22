@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>photoshop</title>
+		<link rel="icon" type="text/css" href="logo.ico" />
+		<!--引入各种文件-->
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/nav.css" />
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		<!--	<link rel="stylesheet" type="text/css" href="css/footer.css"/>-->
+		<script src="script/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="script/nav.js" type="text/javascript" charset="utf-8"></script>
+		<script src="script/main.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			
+		</script>
+
+	</head>
+
+	<body>
+		<!--头部-->
+		<div id="header">
+			<!--导航-->
+			<div class="nav">
+				<!--logo-->
+				<div class="logo" title="返回首页">
+					<a href="http://www.baitt1994.xyz/" class="navImg">
+						<img src="img/logo.png" />
+					</a>
+					<div class="subImg" id="subImg">
+						<div class="arrow">
+							<img src="img/arrow.png" />
+						</div>
+						<div class="home">
+							<span id="">
+								返回首页
+							</span>
+						</div>
+					</div>
+				</div>
+				<!--主导航-->
+				<div class="mainNav">
+					<ul>
+						<li>
+							<a href="http://www.baitt1994.xyz/life.html" id="txt">life</a>
+							<div class="subLife" id="sub">
+								<a href="http://www.baitt1994.xyz/life.html">
+									<img src="img/eat.png" />
+									<span id="">食谱</span>
+								</a>
+								
+								<a href="http://www.baitt1994.xyz/life.html">
+									<img src="img/nav/play.png" />
+									<span id="">皂片</span>
+								</a>
+								
+							</div>
+						</li>
+						<li>
+							<a href="http://www.baitt1994.xyz/studyNotes.html" class="studyNotes" id="txt">studyNotes</a>
+							<div class="subStudy" id="sub">
+								<a href="http://www.baitt1994.xyz/studyNotes/css.html">
+									<img src="img/nav/css.png" />
+									<span id="">
+										CSS/CSS3
+									</span>
+								</a>
+								<a href="http://www.baitt1994.xyz/studyNotes/html.html">
+									<img src="img/nav/html.png" />
+									<span id="">
+										HTML/HTML5
+									</span>
+								</a>
+								<a href="http://www.baitt1994.xyz/studyNotes/jquery.html">
+									<img src="img/nav/jq.png" />
+									<span id="">
+										锋利的jquery
+									</span>
+								</a>
+								<a href="http://www.baitt1994.xyz/studyNotes/javascript0.html">
+									<img src="img/nav/js1.png" />
+									<span id="">
+										javascript入门经典
+									</span>
+								</a>
+								<a href="http://www.baitt1994.xyz/studyNotes/photoshop.html">
+									<img src="img/nav/ps.png" />
+									<span id="">
+										photoshop
+									</span>
+								</a>
+								<a href="http://www.baitt1994.xyz/studyNotes/javascript.html">
+									<img src="img/nav/js.png" />
+									<span id="">
+										javascript权威指南
+									</span>
+								</a>
+							</div>
+						</li>
+						<li>
+							<a href="http://www.baitt1994.xyz/more.html" class="navMore" >more</a>
+							<div class="subMore" id="subM">
+								<div class="arrow">
+									<img src="img/arrow.png" />
+								</div>
+								<div class="subMoreNav">
+									<ul>
+										<li>
+											<a href="https://github.com/baiwh">
+												
+												<span id=""><img src="img/icon/github.png" />myGithub</span>
+											</a>
+										</li>
+										<li>
+											<a href="">
+												
+												<span id=""><img src="img/icon/email.png" />联系我</span>
+											</a>
+										</li>
+									</ul>
+
+								</div>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<!--搜索框-->
+				<div class="search">
+					<input type="text" name="" id="" class="inp" value="搜索功能待完善" />
+					<input type="button" name="" class="searchButton" value="搜索" />
+				</div>
+			</div>
+		</div>
+
+		<!--主体-->
+		<div id="content" >
+			<div class="menu">
+				<h1>基础功能</h1>
+				<div class="container">
+					<pre>
+1、画布：
+     ctrl+ +/-：放大/缩小画布
+     ctrl+n：新建画布
+2、移动工具：
+空格：平移
+ctrl+0：最大化当前视图
+3、矩形选框：
+     ctrl+矩形选框：裁切
+     ctrl+alt：复制
+     按住shift：临时切换模式
+     shift+alt：切成第四个模式(松开就切回）
+4、椭圆选区：
+     按住shift：控制等比例，画正圆
+     按住alt：控制中心点
+5、自由选区：
+     多边形套索：
+退格键：选错点退回
+双击：起点和终点闭合
+     磁性套索：
+            ctrl+d：取消选区
+            更改频率：更改细节
+            esc：终止操作
+6、魔棒：
+	在画面中单击：选取同一颜色
+	容差值：越小，所选范围越小
+	快速选区：推拉，类似加法模式，选多了改减法
+7、选择-色彩范围：
+	黑色：未选中
+	白色：选中
+	灰色：不确定区域
+	第一根吸管：通过更改容差确定
+	第二根吸管：吸取暗部
+8、调整边缘：
+	蒙版：白色显示黑色隐藏
+	ctrl+z：后退一步
+	右键：选择一个笔头
+	新建图层，选中两个，ctrl+e：合并
+9、裁切：
+	透视裁切：通过点，改变透视感
+10、污点修复：
+     {}/右键：放大缩小
+11、修复画笔：
+     按住alt：选取一块好的去盖住坏的
+12、修补：
+     左键画出要修补的区域，松开后把坏的拖动到好的地方
+13、内容感知移动工具：画出区域，拖动（移动/扩展）
+14、红眼工具：单击
+15、仿制图章：同修复画笔。区别：边缘不融合
+16、图案图章：
+     把某一图片作为图案图章：编辑-定义图案-确定
+17、减淡/加深工具：通过更改曝光度提亮
+18、渐变：通过画线控制。
+     按shift：画出水平/垂直线
+19、混合器画笔：可画出油画效果
+20、文字：单击即可输入，完成后点击对勾可移动位置
+21、钢笔：矢量工具。控制锚点。
+     按住alt：临时切换为转换锚点。
+22、色阶：调整颜色范围
+ctrl+j：复制图层
+23、曲线工具：调整曝光度。
+24、图层：
+     右键-栅格化：转为普通图层
+25、图层蒙版：结合画笔
+     黑色：隐藏？
+     白色：显示？
+     灰色：半透明
+26、色彩混合模式：画笔/图层
+     正片叠底：先用吸管拾取颜色，然后用画笔，以拾取色为基础，画面中所有比它亮的都变成前景色，比它暗的都保持不变。两色混合，变暗。
+     滤色：...以拾取色为基础，画面中所有比它暗的都变成前景色，比它亮的都保持不变。整体提亮。
+27、通道抠图RGB：去除带有黑色背景提取出的半透明物体。
+     通道-复制红绿蓝图层-点小眼睛切换回RGB复合通道，图层-新建三个空白图层，
+     返回通道面板，按住ctrl点选红色副本缩略图，
+     切回图层面板，点一个空白图层，双击左侧前景色，在RGB处把R改为255其他为0，alt+delete用前景色填充，蓝绿同上
+     图层面板，依次将图层混合模式切换为滤色
+     最后选中三个，ctrl+e合并
+28、通道抠图cmyk：白色背景下
+     图像-模式-CMYK
+     新建四个
+     通道面板-青、洋红、黄、黑复制出来，按ctrl点选青副本缩略图
+     图层面板-第一个-双击前景色，C改为100，其余为0，alt+delete填充，其余同上（黑色可以放到最左下角）
+     ctrl+d取消选区，取消勾选背景层隐藏
+     由上至下改为正片叠底
+29、液化：滤镜-液化
+     膨胀/缩小：长按左键
+     可配合左侧加深/减淡
+30、消失点：滤镜-消失点
+     创建平面工具-打四个透视点，从中线推拉，
+用4仿制图章，按住alt拾取区域，对好位置后推移上去
+31、消失点（合成）：
+     先调整合适大小，按住ctrl点选缩略图，ctrl+c复制，ctrl+d取消选区，然后暂时隐藏
+     背景图上，滤镜-消失点。根据物体轮廓画透视线，ctrl+v粘贴，移动到目标区域，确定。
+32、图片合并：几个有连续部分的图片合并起来
+     几个图片都打开，文件-自动-photomerge-添加打开的文件-确定
+
+					</pre>
+				</div>
+			</div>
+		</div>
+
+		<!--底部-->
+		<div id="footer">
+			<!--<div class="beian">
+				<a href="http://www.miitbeian.gov.cn">冀ICP备17021530号</a>
+			</div>-->
+
+		</div>
+	</body>
+
+</html>
