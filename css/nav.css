@@ -1,0 +1,285 @@
+#header{
+	height: 60px;
+	background: radial-gradient(#b3eaf2,#ffffff);
+}
+#header .nav{
+	position: relative;
+	height: 60px;
+	width: 1000px;
+	margin: 0 auto;
+	z-index: 100;
+}
+/*导航图片*/
+#header .nav .logo{
+	float: left;
+	display: inline;
+	width: 60px;
+	height: 60px;
+}
+#header .nav .logo .navImg img{
+	position: absolute;
+	top: 5px;
+	width: 50px;
+	height: 50px;
+}
+/*导航图片的小提示*/
+#header .nav .logo .subImg{
+	display: block;
+	position: absolute;
+	top: 66px;
+	left: -15px;
+	height: 45px;
+	width: 90px;
+	
+}
+#header .nav .logo .subImg .arrow{
+	float: left;
+	height: 5px;
+	position: absolute;
+	top: -11px;
+	left: 30px;
+}
+#header .nav .logo .subImg .arrow img{
+	margin: auto;
+	height: 12px;
+	width: 21px;
+}
+#header .nav .logo .subImg .home{
+	width: 80px;
+	height: 30px;
+	background: #FFFFFF;
+	border: 2px solid #CCCCCC;
+	box-shadow: 0px 5px 20px #B3EAF2;
+	border-radius: 10px;
+	
+}
+#header .nav .logo .subImg .home span{
+	height: 30px;
+	line-height: 30px;
+	font-size: 15px;
+	color: #5ABFF2;
+	font-weight: 800;
+	padding: 0px 8px;
+}
+
+
+
+
+/*主导航*/
+#header .nav .mainNav{
+	position: absolute;
+	top: 0;
+	height: 60px;
+	display: inline;
+	float: left;
+	z-index: 100;
+	margin: 0;
+}
+/*主导航的蓝条的字*/
+#header .nav .mainNav ul li{
+	display: inline-block;
+	float: left;
+	margin: 0;
+	height: 100%;
+}
+/*主导航的蓝条的字链接*/
+#header .nav .mainNav ul li a{
+	font-size: 20px;
+	font-weight: 700;
+	color: #06a5f6;
+	height: 100%;
+	line-height: 60px;
+	padding: 0px 90px;
+	margin: 0;
+	display: block;
+}
+/*主导航的悬浮效果*/
+#header .nav .mainNav ul li a:hover{
+	opacity: 0.5;
+	text-decoration: none;
+}
+
+/*下拉列表*/
+#header .nav .mainNav .subStudy{
+	display: none;
+	position: absolute;
+	top: 60px;
+	left: -65px;
+	background: #FFFFFF;
+	margin: 0;
+	border-top-style: none;
+	padding-top: 0;
+	width: 1000px;
+	height: 150px;
+	overflow: hidden;
+}
+#header .nav .mainNav .subLife{
+	display: none;
+	position: absolute;
+	top: 60px;
+	margin: 0px -55px;
+    padding: 0px 47px;
+	background: #FFFFFF;
+	border-top-style: none;
+	padding-top: 0;
+	width: 1000px;
+	height: 150px;
+	overflow: hidden;
+}
+
+/*下拉列表里的图+字*/
+
+#header .nav .mainNav .subStudy a{
+	float: left;
+	position: relative;
+	top: 10px;
+	height: 130px;
+	width: 150px;
+	overflow: hidden;
+	display: inline;
+	margin: 5px 7px 0px 7px;
+	padding: 0px 0px;
+	
+}
+#header .nav .mainNav .subLife a{
+	float: left;
+	position: relative;
+	top: 10px;
+	height: 130px;
+	width: 190px;
+	overflow: hidden;
+	display: inline;
+	margin: 5px 90px 0px 90px;
+	padding: 0px 0px;
+	
+}
+#sub span:hover{
+	
+}
+/*下拉列表里的图*/
+#header .nav .mainNav .subStudy a img{	
+	margin: 0px auto;	
+	display: block;
+	text-align: center;
+	align-content: center;
+}
+#header .nav .mainNav .subLife a img{	
+	margin: 0px auto;	
+	display: block;
+	text-align: center;
+	align-content: center;
+}
+/*life和study下拉列表的字*/
+#header .nav .mainNav .subStudy a span{
+	position: relative;
+	top: -13px;
+	font-size: 15px;
+	display: block;
+	font-size: 15px;
+	padding: 0px 0px;
+	margin: 0px 0px;
+	height: 20px;
+	clear: left;
+	width: 150px;
+	text-align: center;
+}
+#header .nav .mainNav .subLife a span{
+	position: relative;
+	top: -13px;
+	font-size: 15px;
+	display: block;
+	font-size: 15px;
+	padding: 0px 0px;
+	margin: 0px auto;
+	height: 20px;
+	clear: left;
+	width: 150px;
+	text-align: center;
+}
+
+
+
+/*more的下拉列表*/
+#header .nav .mainNav .subMore{
+	display: none;
+	position: absolute;
+	left: 572px;
+	height: 150px;
+	width: 100px;
+	
+}
+/*小三角*/
+#header .nav .mainNav .subMore .arrow{
+	float: left;
+	height: 5px;
+	position: absolute;
+	top: -11px;
+	left: 39px;
+}
+
+#header .nav .mainNav .subMore .arrow img{
+	margin: auto;
+	height: 12px;
+	width: 21px;
+}
+/*more的下拉里的所有图+字*/
+#header .nav .mainNav .subMore .subMoreNav{
+	width: 150px;
+	height: 91px;
+	background: #FFFFFF;
+	border: 2px solid #CCCCCC;
+	box-shadow: 0px 5px 20px #CCCCCC;
+	border-radius: 10px;
+}
+/*more的下拉里的图+字*/
+#header .nav .mainNav .subMore .subMoreNav a{
+	display: inline;
+	padding: 0px 23px;
+	line-height: 45px;
+	margin: 20px auto;
+}
+/*more的下拉里的图片*/
+#header .nav .mainNav .subMore .subMoreNav a img{
+	width: 20px;
+	height: 20px;
+}
+/*more下拉里的字*/
+#header .nav .mainNav .subMore .subMoreNav a span{
+	font-size: 20px;
+	line-height: 0px;
+	font-weight: 100;
+	display: inline;
+}
+#subM {
+	
+}
+
+
+
+
+
+
+/*搜索部分*/
+#header .nav .search{
+	height: 60px;
+	line-height: 60px;
+	float: right;
+	background-color: ;
+}
+#header .nav .search .inp{
+	height: 25px;
+	border-radius: 8px;
+	border: 1px solid #FFFFFF;
+	color: #CCCCCC;
+}
+#header .nav .search .searchButton{
+	background-color: #e5f8fb;
+	color: #5abff2;
+	line-height: 30px;
+	border: 1px solid #FFFFFF;
+	padding: 0 10px;
+	border-radius: 8px;
+	font-size: 15px;
+	font-weight: 700;
+}
+

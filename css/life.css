@@ -1,0 +1,83 @@
+#content {
+	width: 1000px;
+	margin: 0 auto;
+}
+/*左边的*/
+#content .menuEat {
+	float: left;
+	margin: auto 0px;
+	position: relative;
+	z-index: 500;
+}
+
+
+/*右边的*/
+#content .menuPhoto{
+	float: right;
+	margin: auto 0px;
+	position: relative;
+	z-index: 500;
+}
+
+/*链接文字神马的*/
+#content .con ul li {
+	margin: 10px 0;
+}
+#content .con ul li a {
+	background: #E5F8FB;
+	display: block;
+	text-align: center;
+	font-size: 25px;
+	line-height: 100px;
+	text-decoration: none;
+	color: #3399FF;
+	font-weight: 600;
+	width: 100px;
+	border: 1px solid #E5F8FB;
+	border-radius: 50px;
+}
+#content .con ul li a:hover {
+	color: #FFFFFF;
+	font-weight: 700;
+	border: 1px solid #FFFFFF;
+	background: #5ABFF2;
+}
+
+
+
+/*中间的*/
+#content .win {
+	/*background-size: auto;
+	background: url(../life/img/ss/8.jpg) no-repeat;*/
+	border-radius: 250px;
+	overflow: hidden;
+	position: fixed;
+	left: 50%;
+	top: 50%;
+	width: 450px;
+	height: 600px;
+	max-height: 45%;
+	max-width: 60%;
+	min-height: 450px;
+	min-width: 600px;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+	-o-transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%);
+	transition: height 1s ease;
+	transition: top 1s ease;
+	box-shadow: 0px 0px 50px #5ABFF2;
+}
+#content .win img{
+	display: none;
+	max-height: 100%;
+	max-width: 100%;
+	min-height: 100%;
+}
+.win .ss,.win .ymn,.win .ldg,.win .dhs,.win .mjt,.win .gc,.win .sgb{
+	margin: 0px 75px;
+}
+#content .win .jj{
+	display: block;
+}

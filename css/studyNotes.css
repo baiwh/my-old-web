@@ -1,0 +1,49 @@
+#content{
+	width: 1000px;
+	margin: 30px auto;
+	margin-bottom:50px;
+}
+/*所有大div盒子*/
+#content div{
+	height: 200px;
+	width: 1000px;
+}
+/*大盒子里的链接*/
+#content .noteA {
+	display: block;
+	height: 200px;
+	width: 1000px;
+	margin: 0px 0px;
+	padding: 0px 0px;
+}
+/*链接里的图的div*/
+#content .noteA .noteImg{
+	height: 150px;
+	width: 150px;
+	position: relative;
+	left: 380px;
+	margin: 15px 0px;
+	padding: 0px 0px;
+	float: left;
+}
+#content .noteA .noteImg img{
+	
+}
+/*链接里的字的div*/
+#content .noteA .noteP{
+	display: none;
+	width: 800px;
+	height: 150px;
+	float: left;
+	position: relative;
+	left: 180px;
+	margin: 0px 0px;
+	padding: 0px 0px;
+	
+}
+/*字的pre*/
+#content .noteA .noteP pre{
+	color: #06A5F6;
+	font-size: 15px;
+	font-weight: 800;
+}
